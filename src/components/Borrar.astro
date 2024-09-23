@@ -1,0 +1,37 @@
+---
+// This is an example Astro component with multiple rule violations
+const unusedVariable = "I'm not used anywhere";
+---
+
+<html>
+  <head>
+    <title>Example Page</title>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+    <!-- Intentionally using set:html directive -->
+    <div set:html="<strong>Unsafe HTML!</strong>" />
+
+    <!-- Duplicate key warning -->
+    <ul>
+      <li key="item1">Item 1</li>
+      <li key="item1">Item 1 Duplicate</li>
+    </ul>
+
+    <!-- Empty component -->
+    <MyEmptyComponent />
+
+    <script>
+      // This will trigger no-console warning
+      console.log('This is a console log');
+
+      // This will trigger no-unused-vars warning
+      const unusedVar = 'This variable is never used';
+
+      // Strict equality violation
+      if (a == b) {
+        // Some code
+      }
+    </script>
+  </body>
+</html>
