@@ -1,0 +1,65 @@
+/* example.module.css */
+
+/* This rule ensures valid hexadecimal color values */
+:root {
+  --primary-color: #3498db; /* Valid hex color */
+  --secondary-color: #2ecc71; /* Valid hex color */
+}
+
+/* The declaration-colon-space-after rule ensures there's a space after the colon */
+.button {
+  background-color: var(--primary-color); /* Space after colon */
+  color: white; /* No space before colon */
+  padding: 1rem; /* Padding for the button */
+}
+
+/* The declaration-colon-space-before rule ensures there's no space before the colon */
+.card {
+  border: 1px solid var(--secondary-color); /* No space before colon */
+}
+
+/* The number-leading-zero rule requires a leading zero for decimal numbers */
+.amount {
+  margin-top: 0.5rem; /* Leading zero for decimal */
+}
+
+/* The number-no-trailing-zero rule prohibits trailing zeros in decimal numbers */
+.price {
+  font-size: 1.5rem; /* No trailing zero */
+}
+
+/* The selector-max-id rule limits the usage of ID selectors */
+.container {
+  /* Class selector example */
+}
+
+/* The selector-max-universal rule limits the usage of universal selectors */
+div {
+  color: var(--primary-color); /* Specific selector */
+}
+
+/* The block-no-empty rule prohibits empty blocks */
+.header {
+  display: flex; /* Non-empty block */
+}
+
+/* The unit-no-unknown rule prohibits unknown units */
+.element {
+  width: 100%; /* Known unit */
+  height: 50px; /* Known unit */
+}
+
+/* The font-family-no-duplicate-names rule avoids duplicate font names */
+.text {
+  font-family: 'Arial', 'Helvetica', sans-serif; /* No duplicates */
+}
+
+/* The value-no-vendor-prefix rule prohibits vendor-prefixed properties */
+.transition {
+  transition: all 0.3s ease; /* No vendor prefix */
+}
+
+/* The color-hex-length rule requires short hex values when possible */
+.success {
+  color: #0f0; /* Short hex value */
+}
